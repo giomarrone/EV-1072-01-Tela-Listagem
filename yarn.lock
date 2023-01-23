@@ -3497,6 +3497,18 @@
   optionalDependencies:
     "graceful-fs" "^4.1.6"
 
+"jw-paginate@^1.0.4":
+  "integrity" "sha512-W0bv782exgCoynUL/egbRpaYwf/r6T6e02H870H5u3hfSgEYrxgz5POwmFF5aApS6iPi6yhZ0VF8IbafNFsntA=="
+  "resolved" "https://registry.npmjs.org/jw-paginate/-/jw-paginate-1.0.4.tgz"
+  "version" "1.0.4"
+
+"jw-vue-pagination@^1.0.3":
+  "integrity" "sha512-85BV/5maL87mykKH8GBGRsi23p7yVsA4Y8dakCMQNbt/7wOJEqDtOySq5xm1xaudVO4UOp+0lbzUiTrHvXfr+A=="
+  "resolved" "https://registry.npmjs.org/jw-vue-pagination/-/jw-vue-pagination-1.0.3.tgz"
+  "version" "1.0.3"
+  dependencies:
+    "jw-paginate" "^1.0.4"
+
 "kind-of@^6.0.2":
   "integrity" "sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw=="
   "resolved" "https://registry.npmjs.org/kind-of/-/kind-of-6.0.3.tgz"
@@ -3858,10 +3870,10 @@
   dependencies:
     "yallist" "^4.0.0"
 
-"miragejs@^0.1.43":
-  "integrity" "sha512-BhkyxssOZ2i4JqRjWpRnUQu9AFAKHyft8dJbqsg/N64+gCn2vw6vRteMpTKXllLjCPOA9Os8PhGRVXlXs4Ojhw=="
-  "resolved" "https://registry.npmjs.org/miragejs/-/miragejs-0.1.43.tgz"
-  "version" "0.1.43"
+"miragejs@^0.1.46":
+  "integrity" "sha512-xmWiFaGamslyUqZt7tDd0kkjWa8Ow4I7ID/Gi8c+iCVibZyU+SAiIZNmUynnDGD1Q8g8nlydtzADnb5+21gwww=="
+  "resolved" "https://registry.npmjs.org/miragejs/-/miragejs-0.1.46.tgz"
+  "version" "0.1.46"
   dependencies:
     "@miragejs/pretender-node-polyfill" "^0.1.0"
     "inflected" "^2.0.4"
@@ -5447,6 +5459,11 @@
   "integrity" "sha1-IpnwLG3tMNSllhsLn3RSShj2NPw= sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg=="
   "resolved" "https://registry.npmjs.org/vary/-/vary-1.1.2.tgz"
   "version" "1.1.2"
+
+"vue-click-outside@^1.1.0":
+  "integrity" "sha512-pNyvAA9mRXJwPHlHJyjMb4IONSc7khS5lxGcMyE2EIKgNMAO279PWM9Hyq0d5J4FkiSRdmFLwnbjDd5UtPizHQ=="
+  "resolved" "https://registry.npmjs.org/vue-click-outside/-/vue-click-outside-1.1.0.tgz"
+  "version" "1.1.0"
 
 "vue-hot-reload-api@^2.3.0":
   "integrity" "sha512-BXq3jwIagosjgNVae6tkHzzIk6a8MHFtzAdwhnV5VlvPTFxDCvIttgSiHWjdGoTJvXtmRu5HacExfdarRcFhog=="
