@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <!-- aqui deve ir o Header -->
-    <!-- aqui deve ir a navbar -->
+    <Header></Header>
+    <Navbar></Navbar>
     <div class="view-container">
-      <router-view/>
+      <router-view />
     </div>
   </div>
 </template>
@@ -21,7 +21,7 @@ export default {
   },
   components: {
     Header,
-    Navbar
+    Navbar,
   }
 }
 </script>
@@ -33,5 +33,16 @@ export default {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  --brand-magenta: #e02b57;
+  --brand-magenta-light: #f6678d;
+  --brand-magenta-dark: #c7264e;
+  --paragraph: #7e7e7e;
+}
+
+.modal {
+  z-index: 10;
 }
 </style>
