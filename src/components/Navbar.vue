@@ -1,19 +1,19 @@
 <template>
   <div id="nav-container" class="nav-container">
     <ul class="selected-area">
-      <li class="tab" id="signup-tab">CADASTRO</li>
-      <li class="tab tab-active" id="list-tab">LISTAGEM</li>
+      <router-link to="/register" class="tab">
+        CADASTRO
+      </router-link>
+      <router-link to="/" class="tab">
+        LISTAGEM
+      </router-link>
     </ul>
-    <button id="new-user-btn" @click="changeScreen()" class="new-user">
-      Cadastrar novo usuário
-    </button>
+    
   </div>
 </template>
 
 <script>
 import router from "@/router";
-import Register from "../views/Register.vue";
-import UsersList from "../views/UsersList.vue";
 
 export default {
   name: "Navbar",
@@ -24,35 +24,11 @@ export default {
     };
   },
 
-  created() {
-    this.$root.$refs.A = this;
-  },
-  methods: {
-    changeScreen() {
-      let newUserBtn = document.getElementById("new-user-btn");
-      let listTab = document.getElementById("list-tab");
-      let signupTab = document.getElementById("signup-tab");
-
-      if (
-        newUserBtn.innerHTML === "Voltar" ||
-        this.$router.name == "cadastro"
-      ) {
-        newUserBtn.innerHTML = "Cadastrar novo usuário";
-        signupTab.classList.toggle("tab-active");
-        listTab.classList.toggle("tab-active");
-
-        this.$router.push("/");
-      } else {
-        newUserBtn.innerHTML = "Voltar";
-        signupTab.classList.toggle("tab-active");
-        listTab.classList.toggle("tab-active");
-
-        this.$router.push("./register");
-      }
-    }
+  props: {
+    tab: String
   },
 
-  components: { router, Register, UsersList },
+  components: { router },
 };
 </script>
 
@@ -64,9 +40,10 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60%;
+  width: 48rem;
   margin: 0 auto;
   gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .selected-area {
@@ -92,25 +69,10 @@ button {
   border: none;
   transition: 0.2s;
   user-select: none;
+  text-decoration: none;
 }
 
-.new-user {
-  background-color: var(--brand-magenta);
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
-  color: white;
-  font-weight: 700;
-  align-self: flex-end;
-  transition: 0.2s;
-}
-
-.new-user:hover {
-  transition: 0.2s;
-  background-color: #f6678d;
-}
-
-.tab-active {
+a.router-link-exact-active {
   transition: 0.2s;
   border-bottom: 2px solid black;
   color: black;
